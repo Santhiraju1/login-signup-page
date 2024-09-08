@@ -1,0 +1,22 @@
+/* Remove default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.user-font{
+  font-family: "Lucida Console", "Courier New", monospace;
+font-size: 17px;
+}
+.login-font {
+  font-family: "Sofia", sans-serif;
+  font-size: 40px;
+  text-shadow: 3px 3px 3px #ababab;
+  color: #007bff;
+}
