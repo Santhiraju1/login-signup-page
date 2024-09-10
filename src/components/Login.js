@@ -18,7 +18,9 @@ function Login({ toggleForm }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Simulate successful login
     alert(`Login successful! Username: ${formData.username}`);
+    toggleForm();  // Close the form after successful login
   };
 
   return (
@@ -36,7 +38,6 @@ function Login({ toggleForm }) {
             onChange={handleChange}
             required
           />
-          <span className="required-field">User name is a required field</span>
         </div>
 
         {/* Password */}
@@ -50,7 +51,6 @@ function Login({ toggleForm }) {
             onChange={handleChange}
             required
           />
-          <span className="required-field">Password is a required field</span>
         </div>
 
         {/* Remember Me */}
@@ -69,7 +69,11 @@ function Login({ toggleForm }) {
           <button type="submit" className="login-button">
             Login
           </button>
-          <button type="button" className="new-user-button" onClick={toggleForm}>
+          <button
+            type="button"
+            className="new-user-button"
+            onClick={() => toggleForm('signup')} // Switch to signup form
+          >
             New User? Register here
           </button>
         </div>
@@ -79,5 +83,6 @@ function Login({ toggleForm }) {
 }
 
 export default Login;
+
 
 
